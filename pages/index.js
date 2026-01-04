@@ -38,7 +38,9 @@ const Home = (props) => {
                   <a className="home-link10">
                     <img
                       alt="image"
-                      src="/logo4-1200w.png"
+                      sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
+                      src="/logo4-1200w.webp"
+                      srcSet="/logo4-1200w.webp 1200w, /logo4-tablet.webp 800w, /logo4-mobile.webp 480w"
                       className="home-image1"
                     />
                   </a>
@@ -142,7 +144,9 @@ const Home = (props) => {
             <div className="home-thq-hero-inner-container-elm">
               <img
                 alt="image"
-                src="/chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-1200w.png"
+                sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
+                src="/chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-1200w.webp"
+                srcSet="/chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-1200w.webp 1200w, /chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-tablet.webp 800w, /chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-mobile.webp 480w"
                 className="home-thq-image-elm"
               />
             </div>
@@ -378,7 +382,9 @@ const Home = (props) => {
             <div className="home-thq-image-container-elm">
               <img
                 alt="יועץ משכנתאות"
-                src="/chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-1200w.png"
+                sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
+                src="/chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-1200w.webp"
+                srcSet="/chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-1200w.webp 1200w, /chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-tablet.webp 800w, /chatgpt%20image%20jan%203%2C%202026%2C%2011_47_25%20pm-mobile.webp 480w"
                 className="home-image2"
               />
             </div>
@@ -513,7 +519,9 @@ const Home = (props) => {
               <div className="home-thq-logo-footer-elm">
                 <img
                   alt="image"
-                  src="/logo4-1200w.png"
+                  sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
+                  src="/logo4-1200w.webp"
+                  srcSet="/logo4-1200w.webp 1200w, /logo4-tablet.webp 800w, /logo4-mobile.webp 480w"
                   className="home-image3"
                 />
               </div>

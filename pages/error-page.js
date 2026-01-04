@@ -42,7 +42,9 @@ const ErrorPage = (props) => {
                   <a className="error-page-link1">
                     <img
                       alt="image"
-                      src="/logo4-1200w.png"
+                      sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
+                      src="/logo4-1200w.webp"
+                      srcSet="/logo4-1200w.webp 1200w, /logo4-tablet.webp 800w, /logo4-mobile.webp 480w"
                       className="error-page-image1"
                     />
                   </a>
@@ -239,7 +241,9 @@ const ErrorPage = (props) => {
               <div className="error-page-thq-logo-footer-elm">
                 <img
                   alt="image"
-                  src="/logo4-1200w.png"
+                  sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
+                  src="/logo4-1200w.webp"
+                  srcSet="/logo4-1200w.webp 1200w, /logo4-tablet.webp 800w, /logo4-mobile.webp 480w"
                   className="error-page-image2"
                 />
               </div>

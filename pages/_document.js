@@ -56,13 +56,38 @@ class CustomDocument extends Document {
           <noscript
             dangerouslySetInnerHTML={{
               __html:
-                '</noscript><!--This is the head section-->\n<!-- <style> ... </style> -->\n<script type="application/ld+json">\n  {\n  "@context": "https://schema.org",\n  "@type": "FinancialService",\n  "@id": "https://www.ari-mortgage.com/#financialservice",\n  "name": "ARI משכנתאות",\n  "alternateName": "רותם ביטון – יועץ משכנתאות",\n  "url": "https://www.ari-mortgage.com/",\n  "telephone": "+972544475473",\n  "description": "ייעוץ משכנתאות עצמאי ואובייקטיבי, כולל תכנון משכנתא, מחזור משכנתא ואיחוד הלוואות בהתאמה אישית.",\n  "areaServed": {\n    "@type": "Country",\n    "name": "Israel"\n  },\n  "address": {\n    "@type": "PostalAddress",\n    "addressCountry": "IL"\n  },\n  "serviceType": [\n    "ייעוץ משכנתאות",\n    "מחזור משכנתא",\n    "איחוד הלוואות"\n  ]\n}\n</script>\n<script type="application/ld+json">\n  {\n  "@context": "https://schema.org",\n  "@type": "Person",\n  "@id": "https://www.ari-mortgage.com/#person",\n  "name": "רותם ביטון",\n  "jobTitle": "יועץ משכנתאות עצמאי",\n  "telephone": "+972544475473",\n  "url": "https://www.ari-mortgage.com/",\n  "worksFor": {\n    "@type": "FinancialService",\n    "@id": "https://www.ari-mortgage.com/#financialservice"\n  }\n}\n</script>\n<script type="application/ld+json">\n  {\n  "@context": "https://schema.org",\n  "@type": "WebPage",\n  "@id": "https://www.ari-mortgage.com/#webpage",\n  "name": "ייעוץ משכנתאות ואיחוד הלוואות",\n  "description": "השארת פרטים לייעוץ משכנתאות עם רותם ביטון – ליווי אישי, שקיפות וחיסכון אמיתי.",\n  "url": "https://www.ari-mortgage.com/",\n  "potentialAction": {\n    "@type": "ContactAction",\n    "target": "https://www.ari-mortgage.com/#contact",\n    "result": {\n      "@type": "ContactPoint",\n      "contactType": "customer support",\n      "telephone": "+972544475473"\n    }\n  }\n}\n</script>\n<script type="application/ld+json">\n  {\n  "@context": "https://schema.org",\n  "@type": "BreadcrumbList",\n  "itemListElement": [\n    {\n      "@type": "ListItem",\n      "position": 1,\n      "name": "דף הבית",\n      "item": "https://www.ari-mortgage.com/"\n    }\n  ]\n}\n</script><noscript>',
+                '</noscript><!--This is the head section-->\n<!-- <style> ... </style> -->\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">\n<script type="application/ld+json">\n  {\n  "@context": "https://schema.org",\n  "@type": "FinancialService",\n  "@id": "https://www.ari-mortgage.com/#financialservice",\n  "name": "ARI משכנתאות",\n  "alternateName": "רותם ביטון – יועץ משכנתאות",\n  "url": "https://www.ari-mortgage.com/",\n  "description": "ייעוץ משכנתאות אישי ומקצועי, מחזור משכנתא ואיחוד הלוואות בהתאמה מלאה לצרכי הלקוח.",\n  "telephone": "+972544475473",\n  "areaServed": {\n    "@type": "Country",\n    "name": "Israel"\n  },\n  "address": {\n    "@type": "PostalAddress",\n    "addressCountry": "IL"\n  },\n  "serviceType": [\n    "ייעוץ משכנתאות",\n    "מחזור משכנתא",\n    "איחוד הלוואות"\n  ],\n  "contactPoint": {\n    "@type": "ContactPoint",\n    "telephone": "+972544475473",\n    "contactType": "customer support",\n    "availableLanguage": ["Hebrew"]\n  }\n}\n</script>\n<script type="application/ld+json">\n  {\n  "@context": "https://schema.org",\n  "@type": "Organization",\n  "@id": "https://www.ari-mortgage.com/#organization",\n  "name": "ARI משכנתאות",\n  "url": "https://www.ari-mortgage.com/",\n  "logo": "https://www.ari-mortgage.com/logo.png",\n  "contactPoint": {\n    "@type": "ContactPoint",\n    "telephone": "+972544475473",\n    "contactType": "customer support",\n    "areaServed": "IL",\n    "availableLanguage": ["Hebrew"]\n  }\n}\n</script>\n<script type="application/ld+json">\n  {\n  "@context": "https://schema.org",\n  "@type": "WebPage",\n  "@id": "https://www.ari-mortgage.com/#webpage",\n  "url": "https://www.ari-mortgage.com/",\n  "name": "ייעוץ משכנתאות – רותם ביטון",\n  "description": "יועץ משכנתאות מוסמך – ליווי אישי למשכנתא חדשה, מחזור ואיחוד הלוואות."\n}\n</script><noscript>',
             }}
           ></noscript>
         </Head>
         <body>
           <Main></Main>
           <NextScript></NextScript>
+          <script
+            type="text/javascript"
+            src="https://www.googletagmanager.com/gtag/js?id=G-XR38Q519QM"
+            async
+          ></script>
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html:
+                "window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag('js', new Date());\n        gtag('config', 'G-XR38Q519QM');",
+            }}
+          ></script>
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html:
+                "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n        })(window,document,'script','dataLayer','GTM-MH7CHZWB');",
+            }}
+          ></script>
+          <div
+            dangerouslySetInnerHTML={{
+              __html:
+                '<!-- Your body code here -->\n<script type="text/javascript">\nimport \'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js\';\n\n// Enable dark mode\ndocument.documentElement.classList.add(\'cc--darkmode\');\n\nCookieConsent.run({\nguiOptions: {\nconsentModal: {\nlayout: "box",\nposition: "bottom left",\nequalWeightButtons: true,\nflipButtons: false\n},\npreferencesModal: {\nlayout: "box",\nposition: "right",\nequalWeightButtons: true,\nflipButtons: false\n}\n},\ncategories: {\nnecessary: {\nreadOnly: true\n},\nanalytics: {}\n},\nlanguage: {\ndefault: "en",\nautoDetect: "browser",\ntranslations: {\nen: {\nconsentModal: {\ntitle: "Hello traveller, it\'s cookie time!",\ndescription: "",\ncloseIconLabel: "",\nacceptAllBtn: "Accept all",\nacceptNecessaryBtn: "Reject all",\nshowPreferencesBtn: "Manage preferences",\nfooter: "<a href=\\"#link\\">Privacy Policy</a>\\n<a href=\\"#link\\">Terms and conditions</a>"\n},\npreferencesModal: {\ntitle: "Consent Preferences Center",\ncloseIconLabel: "Close modal",\nacceptAllBtn: "Accept all",\nacceptNecessaryBtn: "Reject all",\nsavePreferencesBtn: "Save preferences",\nserviceCounterLabel: "Service|Services",\nsections: [\n{\ntitle: "Cookie Usage",\ndescription: ""\n},\n{\ntitle: "Strictly Necessary Cookies <span class=\\"pm__badge\\">Always Enabled</span>",\ndescription: "Necessary for performance",\nlinkedCategory: "necessary"\n},\n{\ntitle: "Analytics Cookies",\ndescription: "We use Google Analytics ",\nlinkedCategory: "analytics"\n},\n{\ntitle: "More information",\ndescription: "For any query in relation to my policy on cookies and your choices, please <a class=\\"cc__link\\"\n  href=\\"https://ari-mortgage.com/\\">contact me</a>."\n}\n]\n}\n}\n}\n}\n});\n</script> -->',
+            }}
+          ></div>
         </body>
       </Html>
     )
