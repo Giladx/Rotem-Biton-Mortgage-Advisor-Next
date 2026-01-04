@@ -1257,6 +1257,9 @@ const Home = (props) => {
             .home-thq-contact-elm {
               justify-content: center;
             }
+            .home-thq-cookie-elm {
+              display: none;
+            }
           }
         `}
       </style>

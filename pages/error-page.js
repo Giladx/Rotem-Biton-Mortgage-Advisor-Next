@@ -2,12 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
+import Script from 'dangerous-html/react'
 import { useTranslations } from 'next-intl'
 
 const ErrorPage = (props) => {
   return (
     <>
-      <div className="error-page-container1">
+      <div className="error-page-container10">
         <Head>
           <title>
             ErrorPage - רותם ביטון – יועץ משכנתאות עצמאי | תכנון חכם וחיסכון
@@ -37,7 +38,7 @@ const ErrorPage = (props) => {
         <header dir="rtl" className="error-page-thq-header-elm">
           <div className="error-page-thq-header-container-elm">
             <div className="error-page-thq-logo-container-elm">
-              <div className="error-page-container2">
+              <div className="error-page-container11">
                 <Link href="/">
                   <a className="error-page-link1">
                     <img
@@ -89,9 +90,9 @@ const ErrorPage = (props) => {
             </div>
           </div>
         </header>
-        <div className="error-page-container3">
-          <div className="error-page-container4">
-            <div className="error-page-container5">
+        <div className="error-page-container12">
+          <div className="error-page-container13">
+            <div className="error-page-container14">
               <span>
                 {' '}
                 !
@@ -115,12 +116,12 @@ const ErrorPage = (props) => {
               <span> הייתה בעיה בשליחת הטופס או בטעינת הדף.</span>
               <br></br>
             </p>
-            <div className="error-page-container6">
+            <div className="error-page-container15">
               <button
                 onclick="window.location.reload()"
                 onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"
                 onmouseover="this.style.background='rgba(255,255,255,0.14)'; this.style.transform='translateY(-2px)'"
-                className="error-page-button"
+                className="error-page-button1"
               >
                 {' '}
                 נסה שוב
@@ -140,7 +141,7 @@ const ErrorPage = (props) => {
                   target="_blank"
                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(37,211,102,0.35)'"
                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 16px 40px rgba(37,211,102,0.45)'"
-                  className="error-page-container7"
+                  className="error-page-container16"
                 >
                   <span>
                     {' '}
@@ -154,7 +155,7 @@ const ErrorPage = (props) => {
                 </div>
               </a>
             </div>
-            <div className="error-page-container8">
+            <div className="error-page-container17">
               <span>
                 {' '}
                 ARI משכנתאות · ייעוץ משכנתאות ואיחוד הלוואות
@@ -250,10 +251,81 @@ const ErrorPage = (props) => {
             </a>
           </Link>
         </footer>
+        <div id="cookie-banner" className="error-page-thq-cookie-elm">
+          <div className="error-page-container18">
+            <div className="error-page-container19">
+              <span>
+                {' '}
+                אנו משתמשים בקובצי Cookies כדי לשפר את חוויית המשתמש, לנתח תנועה
+                ולהציג תוכן רלוונטי. המשך גלישה באתר מהווה הסכמה לשימוש בעוגיות.
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+            </div>
+            <div className="error-page-container20">
+              <button id="cookie-accept" className="error-page-button2">
+                {' '}
+                מאשר
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </button>
+              <a href="/privacy-policy" className="error-page-link8">
+                <div className="error-page-container21">
+                  <span>
+                    {' '}
+                    מדיניות פרטיות
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: ' ',
+                      }}
+                    />
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="error-page-container22">
+          <div className="error-page-container23">
+            <React.Fragment>
+              <Script>{`
+(function(){
+(function () {
+  try {
+    var banner = document.getElementById('cookie-banner');
+    var acceptBtn = document.getElementById('cookie-accept');
+
+    if (!banner || !acceptBtn) return;
+
+    var consent = localStorage.getItem('cookie_consent');
+
+    if (!consent) {
+      banner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'accepted');
+      banner.style.display = 'none';
+    });
+  } catch (e) {
+    console.warn('Cookie banner error:', e);
+  }
+})();
+})()
+`}</Script>
+            </React.Fragment>
+          </div>
+        </div>
       </div>
       <style jsx>
         {`
-          .error-page-container1 {
+          .error-page-container10 {
             width: 100%;
             display: flex;
             min-height: 100vh;
@@ -282,7 +354,7 @@ const ErrorPage = (props) => {
             display: flex;
             align-items: center;
           }
-          .error-page-container2 {
+          .error-page-container11 {
             color: #10b981;
             width: 100%;
             height: 80px;
@@ -329,7 +401,7 @@ const ErrorPage = (props) => {
             border-radius: 10px;
             text-decoration: none;
           }
-          .error-page-container3 {
+          .error-page-container12 {
             width: 100%;
             display: flex;
             padding: 40px;
@@ -346,7 +418,7 @@ const ErrorPage = (props) => {
             font-family: 'Heebo', Arial, sans-serif;
             justify-content: center;
           }
-          .error-page-container4 {
+          .error-page-container13 {
             width: 100%;
             border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 40px 32px;
@@ -355,7 +427,7 @@ const ErrorPage = (props) => {
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
             border-radius: 20px;
           }
-          .error-page-container5 {
+          .error-page-container14 {
             color: #ffffff;
             width: 72px;
             height: 72px;
@@ -381,13 +453,13 @@ const ErrorPage = (props) => {
             font-size: 16px;
             line-height: 1.6;
           }
-          .error-page-container6 {
+          .error-page-container15 {
             gap: 14px;
             display: flex;
             align-items: center;
             flex-direction: column;
           }
-          .error-page-button {
+          .error-page-button1 {
             color: #ffffff;
             width: 100%;
             border: 1px solid rgba(255, 255, 255, 0.18);
@@ -403,7 +475,7 @@ const ErrorPage = (props) => {
           .error-page-link4 {
             display: contents;
           }
-          .error-page-container7 {
+          .error-page-container16 {
             color: #0b1220;
             width: 100%;
             padding: 14px 24px;
@@ -416,7 +488,7 @@ const ErrorPage = (props) => {
             border-radius: 14px;
             text-decoration: none;
           }
-          .error-page-container8 {
+          .error-page-container17 {
             color: #94a3b8;
             font-size: 13px;
             margin-top: 26px;
@@ -493,9 +565,70 @@ const ErrorPage = (props) => {
             height: 80px;
             object-fit: cover;
           }
+          .error-page-thq-cookie-elm {
+            left: 0;
+            color: #ffffff;
+            right: 0;
+            bottom: 0;
+            display: none;
+            padding: 16px;
+            z-index: 9999;
+            position: fixed;
+            direction: rtl;
+            background: linear-gradient(135deg, #0f172a, #020617);
+            font-family: Inter, Arial, sans-serif;
+          }
+          .error-page-container18 {
+            gap: 12px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .error-page-container19 {
+            flex: 1 1 300px;
+            opacity: 0.95;
+            font-size: 14px;
+            line-height: 1.5;
+          }
+          .error-page-container20 {
+            gap: 10px;
+            display: flex;
+            flex-shrink: 0;
+          }
+          .error-page-button2 {
+            color: #022c22;
+            border: none;
+            cursor: pointer;
+            padding: 10px 16px;
+            font-size: 14px;
+            background: #22c55e;
+            font-weight: 600;
+            border-radius: 6px;
+          }
+          .error-page-link8 {
+            display: contents;
+          }
+          .error-page-container21 {
+            color: #93c5fd;
+            font-size: 13px;
+            align-self: center;
+            text-decoration: underline;
+          }
+          .error-page-container22 {
+            display: none;
+          }
+          .error-page-container23 {
+            display: contents;
+          }
           @media (max-width: 479px) {
             .error-page-thq-header-container-elm {
               justify-content: center;
+            }
+            .error-page-thq-cookie-elm {
+              display: none;
             }
           }
         `}

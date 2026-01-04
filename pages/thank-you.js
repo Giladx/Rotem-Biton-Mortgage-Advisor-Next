@@ -2,12 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
+import Script from 'dangerous-html/react'
 import { useTranslations } from 'next-intl'
 
 const ThankYou = (props) => {
   return (
     <>
-      <div className="thank-you-container1">
+      <div className="thank-you-container10">
         <Head>
           <title>
             Thank-you - רותם ביטון – יועץ משכנתאות עצמאי | תכנון חכם וחיסכון
@@ -34,7 +35,7 @@ const ThankYou = (props) => {
         <header dir="rtl" className="thank-you-thq-header-elm">
           <div className="thank-you-thq-header-container-elm">
             <div className="thank-you-thq-logo-container-elm">
-              <div className="thank-you-container2">
+              <div className="thank-you-container11">
                 <Link href="/">
                   <a className="thank-you-link1">
                     <img
@@ -83,9 +84,9 @@ const ThankYou = (props) => {
             </div>
           </div>
         </header>
-        <div className="thank-you-container3">
-          <div className="thank-you-container4">
-            <div className="thank-you-container5">
+        <div className="thank-you-container12">
+          <div className="thank-you-container13">
+            <div className="thank-you-container14">
               <span>
                 {' '}
                 ✓
@@ -115,7 +116,7 @@ const ThankYou = (props) => {
                 target="_blank"
                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(37,211,102,0.35)'"
                 onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 16px 40px rgba(37,211,102,0.45)'"
-                className="thank-you-container6"
+                className="thank-you-container15"
               >
                 <span>
                   {' '}
@@ -128,7 +129,7 @@ const ThankYou = (props) => {
                 </span>
               </div>
             </a>
-            <div className="thank-you-container7">
+            <div className="thank-you-container16">
               <span>
                 {' '}
                 ARI משכנתאות · ייעוץ משכנתאות ואיחוד הלוואות
@@ -224,10 +225,81 @@ const ThankYou = (props) => {
             </a>
           </Link>
         </footer>
+        <div id="cookie-banner" className="thank-you-thq-cookie-elm">
+          <div className="thank-you-container17">
+            <div className="thank-you-container18">
+              <span>
+                {' '}
+                אנו משתמשים בקובצי Cookies כדי לשפר את חוויית המשתמש, לנתח תנועה
+                ולהציג תוכן רלוונטי. המשך גלישה באתר מהווה הסכמה לשימוש בעוגיות.
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+            </div>
+            <div className="thank-you-container19">
+              <button id="cookie-accept" className="thank-you-button">
+                {' '}
+                מאשר
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </button>
+              <a href="/privacy-policy" className="thank-you-link8">
+                <div className="thank-you-container20">
+                  <span>
+                    {' '}
+                    מדיניות פרטיות
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: ' ',
+                      }}
+                    />
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="thank-you-container21">
+          <div className="thank-you-container22">
+            <React.Fragment>
+              <Script>{`
+(function(){
+(function () {
+  try {
+    var banner = document.getElementById('cookie-banner');
+    var acceptBtn = document.getElementById('cookie-accept');
+
+    if (!banner || !acceptBtn) return;
+
+    var consent = localStorage.getItem('cookie_consent');
+
+    if (!consent) {
+      banner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'accepted');
+      banner.style.display = 'none';
+    });
+  } catch (e) {
+    console.warn('Cookie banner error:', e);
+  }
+})();
+})()
+`}</Script>
+            </React.Fragment>
+          </div>
+        </div>
       </div>
       <style jsx>
         {`
-          .thank-you-container1 {
+          .thank-you-container10 {
             width: 100%;
             display: flex;
             min-height: 100vh;
@@ -256,7 +328,7 @@ const ThankYou = (props) => {
             display: flex;
             align-items: center;
           }
-          .thank-you-container2 {
+          .thank-you-container11 {
             color: #10b981;
             width: 100%;
             height: 80px;
@@ -303,7 +375,7 @@ const ThankYou = (props) => {
             border-radius: 10px;
             text-decoration: none;
           }
-          .thank-you-container3 {
+          .thank-you-container12 {
             width: 100%;
             display: flex;
             padding: 40px;
@@ -320,7 +392,7 @@ const ThankYou = (props) => {
             font-family: 'Heebo', Arial, sans-serif;
             justify-content: center;
           }
-          .thank-you-container4 {
+          .thank-you-container13 {
             width: 100%;
             border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 40px 32px;
@@ -329,7 +401,7 @@ const ThankYou = (props) => {
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
             border-radius: 20px;
           }
-          .thank-you-container5 {
+          .thank-you-container14 {
             color: #0b1220;
             width: 72px;
             height: 72px;
@@ -355,7 +427,7 @@ const ThankYou = (props) => {
             font-size: 16px;
             line-height: 1.6;
           }
-          .thank-you-container6 {
+          .thank-you-container15 {
             gap: 10px;
             color: #0b1220;
             display: inline-flex;
@@ -370,7 +442,7 @@ const ThankYou = (props) => {
             justify-content: center;
             text-decoration: none;
           }
-          .thank-you-container7 {
+          .thank-you-container16 {
             color: #94a3b8;
             font-size: 13px;
             margin-top: 24px;
@@ -447,12 +519,73 @@ const ThankYou = (props) => {
             height: 80px;
             object-fit: cover;
           }
+          .thank-you-thq-cookie-elm {
+            left: 0;
+            color: #ffffff;
+            right: 0;
+            bottom: 0;
+            display: none;
+            padding: 16px;
+            z-index: 9999;
+            position: fixed;
+            direction: rtl;
+            background: linear-gradient(135deg, #0f172a, #020617);
+            font-family: Inter, Arial, sans-serif;
+          }
+          .thank-you-container17 {
+            gap: 12px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .thank-you-container18 {
+            flex: 1 1 300px;
+            opacity: 0.95;
+            font-size: 14px;
+            line-height: 1.5;
+          }
+          .thank-you-container19 {
+            gap: 10px;
+            display: flex;
+            flex-shrink: 0;
+          }
+          .thank-you-button {
+            color: #022c22;
+            border: none;
+            cursor: pointer;
+            padding: 10px 16px;
+            font-size: 14px;
+            background: #22c55e;
+            font-weight: 600;
+            border-radius: 6px;
+          }
+          .thank-you-link8 {
+            display: contents;
+          }
+          .thank-you-container20 {
+            color: #93c5fd;
+            font-size: 13px;
+            align-self: center;
+            text-decoration: underline;
+          }
+          .thank-you-container21 {
+            display: none;
+          }
+          .thank-you-container22 {
+            display: contents;
+          }
           @media (max-width: 479px) {
             .thank-you-thq-header-container-elm {
               justify-content: center;
             }
-            .thank-you-container3 {
+            .thank-you-container12 {
               min-height: auto;
+            }
+            .thank-you-thq-cookie-elm {
+              display: none;
             }
           }
         `}
