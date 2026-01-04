@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
+import Script from 'dangerous-html/react'
 import { useTranslations } from 'next-intl'
 
 const Home = (props) => {
@@ -347,7 +348,7 @@ const Home = (props) => {
                 name="button"
                 type="submit"
                 data-form-field-id="thq_button_yd8g"
-                className="home-button"
+                className="home-button1"
               >
                 {' '}
                 חזרו אליי
@@ -528,6 +529,77 @@ const Home = (props) => {
             </a>
           </Link>
         </footer>
+        <div id="cookie-banner" className="home-thq-cookie-elm">
+          <div className="home-container4">
+            <div className="home-container5">
+              <span>
+                {' '}
+                אנו משתמשים בקובצי Cookies כדי לשפר את חוויית המשתמש, לנתח תנועה
+                ולהציג תוכן רלוונטי. המשך גלישה באתר מהווה הסכמה לשימוש בעוגיות.
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+            </div>
+            <div className="home-container6">
+              <button id="cookie-accept" className="home-button2">
+                {' '}
+                מאשר
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </button>
+              <a href="/privacy-policy" className="home-link21">
+                <div className="home-container7">
+                  <span>
+                    {' '}
+                    מדיניות פרטיות
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: ' ',
+                      }}
+                    />
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="home-container8">
+          <div className="home-container9">
+            <React.Fragment>
+              <Script>{`
+(function(){
+(function () {
+  try {
+    var banner = document.getElementById('cookie-banner');
+    var acceptBtn = document.getElementById('cookie-accept');
+
+    if (!banner || !acceptBtn) return;
+
+    var consent = localStorage.getItem('cookie_consent');
+
+    if (!consent) {
+      banner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'accepted');
+      banner.style.display = 'none';
+    });
+  } catch (e) {
+    console.warn('Cookie banner error:', e);
+  }
+})();
+})()
+`}</Script>
+            </React.Fragment>
+          </div>
+        </div>
       </div>
       <style jsx>
         {`
@@ -895,7 +967,7 @@ const Home = (props) => {
           .home-textinput4 {
             display: none;
           }
-          .home-button {
+          .home-button1 {
             color: #06261b;
             width: 100%;
             border: none;
@@ -1060,6 +1132,64 @@ const Home = (props) => {
             width: auto;
             height: 80px;
             object-fit: cover;
+          }
+          .home-thq-cookie-elm {
+            left: 0;
+            color: #ffffff;
+            right: 0;
+            bottom: 0;
+            display: none;
+            padding: 16px;
+            z-index: 9999;
+            position: fixed;
+            direction: rtl;
+            background: linear-gradient(135deg, #0f172a, #020617);
+            font-family: Inter, Arial, sans-serif;
+          }
+          .home-container4 {
+            gap: 12px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .home-container5 {
+            flex: 1 1 300px;
+            opacity: 0.95;
+            font-size: 14px;
+            line-height: 1.5;
+          }
+          .home-container6 {
+            gap: 10px;
+            display: flex;
+            flex-shrink: 0;
+          }
+          .home-button2 {
+            color: #022c22;
+            border: none;
+            cursor: pointer;
+            padding: 10px 16px;
+            font-size: 14px;
+            background: #22c55e;
+            font-weight: 600;
+            border-radius: 6px;
+          }
+          .home-link21 {
+            display: contents;
+          }
+          .home-container7 {
+            color: #93c5fd;
+            font-size: 13px;
+            align-self: center;
+            text-decoration: underline;
+          }
+          .home-container8 {
+            display: none;
+          }
+          .home-container9 {
+            display: contents;
           }
           @media (max-width: 767px) {
             .home-thq-faq-elm {
